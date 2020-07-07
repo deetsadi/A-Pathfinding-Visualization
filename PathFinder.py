@@ -1,10 +1,6 @@
 import numpy as np
- 
 import heapq
-import numpy as np
-
 import matplotlib.pyplot as plt
-
 from matplotlib.pyplot import figure
 
 class Node():
@@ -64,7 +60,7 @@ def astar(maze, start, end):
         for new_position in [(0, -1), (0, 1), (-1, 0), (1, 0), (-1, -1), (-1, 1), (1, -1), (1, 1)]: # Adjacent squares
 
             node_position = (current_node.position[0] + new_position[0], current_node.position[1] + new_position[1])
-            # Make sure target node is within range and walkable 
+            # Make sure target node is within range and a valid move 
             if node_position[0] > (len(maze) - 1) or node_position[0] < 0 or node_position[1] > (len(maze[len(maze)-1]) -1) or node_position[1] < 0:
                 continue
             if maze[node_position[0]][node_position[1]] != 0:
@@ -99,7 +95,7 @@ def astar(maze, start, end):
     return ("No solutions")
 
 def main():
-
+    #Maze can be modified - 0 represents an open sqaure, and 1 represents a wall
     maze = [[0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
             [0, 1, 1, 1, 1, 0, 0, 0, 0, 0],
             [0, 0, 0, 1, 1, 0, 0, 0, 0, 0],
