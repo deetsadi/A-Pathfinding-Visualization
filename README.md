@@ -5,7 +5,7 @@ This program will find the shortest distance between two points on a maze by uti
 1. Ensure that the matplotlib, heapq and numpy modules are installed. 
    If not, install using this command: <br>
    ```pip install matplotlib heapq numpy```
-2. The maze uses 0 to represent an free square and 1 to represent a wall. It can be modified if you want. 
+2. The maze uses 0 to represent an free square and 1 to represent a wall. It can be modified in the code. 
 3. Run the program and the solution will be visually represented on a diagram.
 
 # How it works
